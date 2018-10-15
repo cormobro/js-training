@@ -8,7 +8,9 @@
  */
 
 // Your code :
-
+function getLast(x){
+	return(x[x.length - 1]);
+}
 //* Begin of tests
 const assert = require('assert')
 
