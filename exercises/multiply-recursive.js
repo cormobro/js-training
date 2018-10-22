@@ -10,7 +10,35 @@
  */
 
 // Your code :
-
+let somme = 0;
+let recur = 0;
+let i = 0;
+function multiply(x, y){
+	if(x === 0 || y === 0){
+		return(0);
+	}
+	else if(x < 0 && y < 0){
+		x = -x;
+		y = -y;
+		return(multiply(x, y));
+	}
+	else if((x > 0 && y > i) || (x < 0 && y > i)){
+		somme = somme + x;
+		i++;
+		return(multiply(x, y));
+	}
+	else if(y < 0 && x > i){
+		somme = somme + y;
+		i++;
+		return(multiply(x, y));
+	}
+	else{
+		recur = somme;
+		somme = 0;
+		i = 0;
+		return(recur);
+	}
+}
 //* Begin of tests
 const assert = require('assert')
 
